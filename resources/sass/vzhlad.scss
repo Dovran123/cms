@@ -1,0 +1,688 @@
+
+
+* {
+    box-sizing: border-box;
+
+}
+.dropdown-content {
+    background-color: white;
+    display: none;
+    position: absolute;
+    margin-top: 2px;
+    right: 3%;
+    margin-right: 200px;
+    box-shadow: 0 -3px 10px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    flex-direction: column;
+    padding: 5px 5px;
+}
+.dropdown-content a {
+    padding: 10px 0;
+    font-size: 10px;
+
+}
+.idk:hover .dropdown-content {
+    display: flex;
+}
+.hlavicka {
+    margin-top: 1px;
+    background-color: white;
+
+    padding: 1.5% 5%;
+    display: flex;
+
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+
+}
+.hlavicka ul li  {
+    margin-left: 6px;
+    padding-left: 10px;
+
+    list-style: none;
+}
+.hlavicka a {
+text-decoration: none;
+}
+.hlavicka ul li a {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: black;
+}
+.hlavicka ul li a:hover {
+    color: #0c63e4;
+}
+
+
+.hlavicka ul {
+    display: flex;
+
+
+}
+.container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.polo{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.telo {
+    background-color: rgb(240, 240, 240);
+    padding: 5em 0;
+    display: flex;
+
+}
+.telo .container h1 {
+    color: #3e69dc;
+    margin-bottom: 1em;
+    font-weight: bold;
+    font-size: 3.5em;
+}
+.text {
+    display: flex;
+
+    justify-content: space-between;
+}
+.text p {
+    width: 80%;
+
+}
+.btn-get-in-touch a {
+    background-color: #3e69dc;
+    color: white;
+    border-radius: 25px;
+    padding: 5px 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    border: none;
+
+
+}
+
+.telo-obrazka {
+    display: flex;
+
+
+}
+.telo-obrazka img {
+    object-fit: cover ;
+    width: 100%;
+
+}
+.pismo {
+    font-size: 21px;
+}
+.telo-modra {
+    color:white;
+    padding: 5em 0;
+    background-color:#3e69dc ;
+
+}
+.telo-modra  img{
+    width: 150px;
+    height: 150px;
+    justify-content: space-between;
+
+}
+.service {
+    color: white;
+
+    font-weight: bold;
+}
+
+.medzi {
+    width: 150px;
+    height: 150px;
+    justify-content: space-between;
+}
+.divko-modre {
+    display: flex;
+
+    padding-top: 5em;
+}
+.telo-modra h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+.telo-box {
+    background-color: white;
+    padding: 3em 0;
+}
+.telo-box h1 {
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 3.5em;
+}
+.boxi {
+
+    display: flex;
+
+    padding: 4em 0;
+}
+.boxi p{
+    color: #6c757d;
+    font-size: 25px;
+    border: 1px solid #ccc ;
+}
+.box1 {
+    width: 26em;
+}
+.box2 {
+    padding-left: 40px;
+    width:  26em;
+
+}
+.obrazok {
+    display: flex;
+
+
+background-image: linear-gradient(rgba(65, 105, 225,0.527),rgba(65, 105, 225, 0.5)) ,url("../../../../semestrlaka-main/obrazky/academy-celebrate-celebration-267885-1-1.jpg") ;
+    background-attachment: fixed;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+
+}
+.telo-pismo h1 {
+    font-weight: bold;
+    font-size: 60px;
+}
+.telo-pismo {
+    justify-content: space-between;
+    padding: 3em 0;
+    background-color: white;
+}
+.pisma{
+
+    margin: 40px 0;
+    display: flex;
+
+
+}
+.pisma div{
+    width: 33%;
+    justify-content: space-between;
+}
+.pisma div p{
+    color: #6c757d;
+    padding-top:40px;
+}
+.modraPodlaha {
+    justify-content: space-between;
+    background-color:#3e69dc ;
+    color: white;
+}
+.medzera {
+    padding: 20px 0;
+}
+.buttoni{
+    background-color: white;
+    text-decoration: none;
+
+    color: #3e69dc;
+    border-radius: 25px;
+    padding: 5px 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    border: none;
+}
+.telo-contaktov{
+    display: flex;
+
+    justify-content: space-between;
+}
+.telo-kontakty {
+    padding: 5em 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url("../../../../semestrlaka-main/obrazky/auditorium-benches-chairs-207691-1-1.jpg");
+   color: white;
+    background-size: cover;
+    background-position: center;
+}
+.telo-contaktov div {
+    width: 33%;
+    padding-left: 40px;
+}
+.telo-contaktov p {
+    font-size: 1.2em;
+}
+.telo-contaktov a {
+    font-size: 1.2em;
+    color: #2c3034;
+}
+.telo-contaktov a:hover {
+    color: #0c63e4;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.futer {
+    padding: 2em 0;
+    background-color: white;
+    color: #6c757d;
+}
+.peticka {
+    display: flex;
+
+    justify-content: space-between;
+}
+.ikonky {
+
+}
+.ikonky ul li {
+    list-style: none;
+}
+.ikonky ul li a{
+
+}
+.ikonky ul {
+    display: flex;
+
+}
+.textik a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #6c757d;
+}
+.textik a:hover {
+    font-weight: bold;
+    color: #0c63e4;
+}
+.nadpis {
+    font-weight: bold;
+    font-size: 2em;
+    color: #0c63e4;
+}
+.nadpis:hover {
+    color: black;
+}
+.ikony {
+    padding-top: 10px;
+
+}
+
+.ikonky ul li {
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+}
+
+#face:hover{
+background: url("../../../../semestrlaka-main/obrazky/ikonky/facebook-box-fill1.png");
+
+}
+
+#twit:hover {
+    background: url("../../../../semestrlaka-main/obrazky/ikonky/twitter-fill1.png");
+}
+#ins:hover {
+    background: url("../../../../semestrlaka-main/obrazky/ikonky/instagram-line1.png");
+}
+#git:hover {
+    background: url("../../../../semestrlaka-main/obrazky/ikonky/github-fill1.png");
+}
+#you:hover{
+    background: url("../../../../semestrlaka-main/obrazky/ikonky/youtube-fill1.png");
+}
+#tru:hover {
+    background: url("../../../../semestrlaka-main/obrazky/ikonky/tumblr-fill1.png");
+}
+
+#face {
+    background: url("../../../../semestrlaka-main/obrazky/ikonky/facebook-box-fill.png");
+
+}
+#twit  {
+    background: url("../../../../semestrlaka-main/obrazky/ikonky/twitter-fill.png");
+}
+#ins  {
+    background: url("../../../../semestrlaka-main/obrazky/ikonky/instagram-line.png");
+}
+#git{
+    background: url("../../../../semestrlaka-main/obrazky/ikonky/github-fill.png");
+}
+#you {
+    background: url("../../../../semestrlaka-main/obrazky/ikonky/youtube-fill.png");
+}
+#tru {
+    background-image: url("../../../../semestrlaka-main/obrazky/ikonky/tumblr-fill.png");
+}
+@media screen and (max-width: 750px){
+  .divko-modre {
+      margin-left: -5em;
+      flex-direction: column;
+  }
+
+    .divko-modre div{
+        width: 100%;
+
+    }
+    .container {
+        margin-left: 1em;
+        width: 80%;
+    }
+    .medzi {
+margin-left: 2em;
+    }
+    .divko-modre img{
+        margin-left: 5em;
+    }
+    .boxi {
+        flex-direction: column;
+    }
+    .box1 {
+        width: 100%;
+    }
+    .box2 {
+        padding-left: 0;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        margin-left: 0.5em;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .container {
+        margin-left: 0.5em;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .pisma {
+        flex-direction: column;
+
+    }
+    .pisma div {
+        width: 100%;
+    }
+    .telo-contaktov {
+        flex-direction: column;
+    }
+    .telo-contaktov div {
+        width: 100%;
+    }
+}
+.vel {
+    width: 25px;
+    height: 25px;
+}
+@media screen and (max-width:1234px) {
+    .text {
+
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 600px) {
+    .idk img {
+        display: none;
+    }
+    .peticka {
+
+        flex-direction: column;
+    }
+    .peticka .ikonky ul{
+        padding: 10px 0;
+    }
+    .ikony ul{
+
+        flex-direction: column;
+        width: 100%;
+         float: left;
+
+         text-align: left;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 29px;
+        top: 19px;
+    }
+    .topnav.responsive .idk a {
+        position: relative;
+
+        display: block;
+        color: black;
+
+    }
+    .topnav.responsive .idk a:hover {
+
+        color: #0c63e4;
+
+    }
+    .topnav.responsive li {
+        float: left;
+        display: block;
+
+    }
+    .hlavicka.hlavna {
+        flex-direction: column;
+        justify-content: normal;
+    }
+
+
+    .topnav a {display: none;}
+    .nadpis {
+        width: 150px;
+
+        height: 50px;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+        background-color: #0c63e4;
+
+        padding: 5px 10px;
+        border-radius: 40px;
+    }
+
+    .topnav a.icon:hover{
+        color: black;
+    }
+    .hlavicka ul li a{
+        color: white;
+    }
+     .dropdown-content.hamburger {
+        display: flex;
+         position: relative;
+         margin-right: 15% ;
+        box-shadow: none;
+         background-color: unset;
+         padding: 0 5px;
+
+
+    }
+    .dropdown-content.hamburger a {
+        padding: 0;
+    }
+}
+#pomery {
+    height: auto;
+    width: auto;
+}
+.topnav .icon {
+    display: none;
+}
+.topnav {
+    overflow: hidden;
+
+}
+.idk.active   {
+    color: #0c63e4 !important ;
+    text-decoration: #0c63e4 !important ;
+}
+
+.idk.active .znacka  {
+    color: #0c63e4 !important ;
+    text-decoration: #0c63e4 !important ;
+}
+
+.logouty {
+    display: none;
+}
+.neprihlaseny {
+    display: none;
+}
+.loginfo {
+    box-shadow: 2px 5px 3px 2px #ccc;
+    text-align: center;
+    border: 1px solid #ccc;
+    display: block;
+
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+}
+.loginfo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.stay {
+    position: sticky;
+    top: 105px;
+
+}
+.adminsedou {
+    color: #ccc;
+}
+.nadc {
+    font-weight: bold;
+}
+.linka {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: block;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+.nastavenieblog {
+    width: 80%;
+
+    margin-left: auto;
+
+    display: flex;
+}
+.velkost {
+    height: 20px;
+    width: 20px;
+}
+div.login {
+    background: rgb(99, 39, 120);
+    width: auto;height: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile-button {
+    background: rgb(99, 39, 120);
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.carty {
+    display: block;
+    background-color: #ffffff;
+    width: 400px;
+    padding: 20px;
+    margin: 50px;
+    margin-left: auto;
+    margin-right:auto;
+}
+.bus{
+
+    margin-right:80px;
+    margin-left: 200px;
+    width: 400px;
+    display: flex;
+    position: relative;
+    padding: 20px;
+}
+.popup{
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+    height: 100vh;
+    position: fixed;
+    color: white;
+    background-color: rgba(black,0.7);
+    padding: 20px;
+    &:target {
+        visibility: visible;
+        opacity: 1;
+        height: 500px;
+        margin-left: 25%;
+    }
+}
+.popup label {
+    padding: 10px;
+}
+.messenge{
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+.slaidery{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    height: 800px;
+}
+.left-arrow{
+    margin-left: -40px;
+    position: absolute ;
+    margin-top: 25%;
+    height: 8px;
+}
+.right-arrow{
+    margin-left: 63%;
+    position: absolute;
+    margin-top: 25%;
+}

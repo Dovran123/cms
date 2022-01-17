@@ -1,0 +1,39 @@
+.teloformu {
+
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.vyplnik
+{
+    display: block;
+    position: center;
+    text-align: center;
+    background-color: #adb5bd;
+    border: 1px solid black;
+    height: auto;
+    width: 200px;
+    border-radius: 10px;
+    margin-left: 36%;
+}
+.medzer {
+    margin: 10px 0;
+    background-color: #0c63e4;
+    color: white;
+    border-radius: 40px;
+    padding: 2px 20px;
+}
+@media screen and (max-width: 700px) {
+    .vyplnik {
+        margin-left: 25%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .vyplnik {
+        margin-left: 20%;
+    }
+}
+.eroor {
+
+}
