@@ -650,14 +650,15 @@ div.login {
     height: 100vh;
     position: fixed;
     color: white;
-    background-color: rgba(black,0.7);
+    background-color: rgba(0,0,0,0.7);
     padding: 20px;
-    &:target {
-        visibility: visible;
-        opacity: 1;
-        height: 500px;
-        margin-left: 25%;
-    }
+
+}
+.popup:target {
+    visibility: visible;
+    opacity: 1;
+    height: 500px;
+    margin-left: 25%;
 }
 .popup label {
     padding: 10px;
