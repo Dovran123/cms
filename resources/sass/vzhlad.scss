@@ -34,7 +34,7 @@
     justify-content: space-between;
     position: sticky;
     top: 0;
-
+    z-index: 2;
 }
 .hlavicka ul li  {
     margin-left: 6px;
@@ -421,6 +421,7 @@ margin-left: 2em;
         flex-direction: column;
     }
 }
+
 @media screen and (max-width: 600px) {
     .idk img {
         display: none;
@@ -686,3 +687,20 @@ div.login {
     position: absolute;
     margin-top: 25%;
 }
+.like i:hover{
+    color: #0c63e4;
+}
+
+.like{
+    position: relative;
+
+    top:2px;
+    font-size: 25px;
+
+}
+@media screen and (max-width:1150px) {
+    .like{
+        padding-left: 88%;
+    }
+}
+

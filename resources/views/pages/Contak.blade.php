@@ -74,10 +74,6 @@
         var email = $('#email').val();
         var text = $('#text').val();
         var uzivatel_fk = $('#fweb').val();
-        console.log(last_name);
-        console.log(name);
-        console.log(email);
-        console.log(text);
         $.ajax({
             type: 'POST',
             url:_url,

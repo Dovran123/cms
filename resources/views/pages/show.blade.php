@@ -6,11 +6,10 @@
 @section('content')
 @Auth
     @if(auth()->user()->user_type == "Administrator" ||auth()->user()->name = $blog->user->name )
-        <div style="margin-top: 40px; display: flex" class="container"><a href="#edit" style="background-color: greenyellow; margin-bottom: 100px" class="buttoni" > edit</a>  <form   method="POST" action="/blog/{{$blog->id}}" enctype="multipart/form-data" >
-                @csrf
-                @method('DELETE')
-                <button  class="buttoni" style="background-color: red ;color: white; margin-left: 20px " onclick="return confirm('Naozaj chcete vymazať?')"  type="submit" >delete</button>
-            </form></div>
+        <div style="margin-top: 40px; display: flex" class="container"><a href="#edit" style="background-color: greenyellow; margin-bottom: 100px" class="buttoni" > edit</a>
+               <div style="height: auto"><button  class="buttoni" style="background-color: red ;color: white; margin-left: 20px " onclick="deleteConfirmation({{$blog->id}})" >delete</button></div>
+
+        </div>
     <div id="edit" class="popup" style="margin-right:200px ">
         <div  class="vlastne">
             <form action="/blog/{{$blog->id}}" method="POST" enctype="multipart/form-data">
@@ -20,9 +19,7 @@
                 <label for="category" >category</label><input type="text" name="category" id="category" value="{{$blog->category}}" required>
                 <label for="tag" >tag</label><input type="text" name="tag" id="tag" value="{{$blog->tag}}" required>
                 <label  for="text" >text</label><input type="text" name="text" id="text" value="{{$blog->text}}" required>
-                <label for="image" >image</label><input type="file" class="@error('image') is-invalid @enderror" name="image" id="image"  required>
-                <input style="display: none" type="text" name="uzivatel_fk" id="sub" value="{{$blog->uzivatel_fk}}}" required>
-
+                <label for="image" >image</label><input type="file" class="@error('image') is-invalid @enderror" name="image" id="image">
                 <input style="margin-top: 20px" type="submit">
 
             </form>
@@ -58,3 +55,52 @@
         </div>
     </div>
 @endsection
+<script type="text/javascript">
+
+
+    function deleteConfirmation(id) {
+
+        Swal.fire({
+            title: "Delete?",
+            text: "Please you can confirm!",
+            type: "warning",
+            showCancelButton: !0,
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "No, cancel!",
+            reverseButtons: !0
+        }).then(function (e) {
+
+            if (e.value === true) {
+                var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+                var _url = "{{url('/blog/delete')}}/" + id;
+                console.log(_url);
+                $.ajax({
+                    type: 'POST',
+                    url:_url,
+
+                    data: {_token: CSRF_TOKEN},
+                    dataType: 'JSON',
+                    success: function (results) {
+
+                        if (results.success === true) {
+                            swal.fire("Done!", results.message, "success");
+                            // refresh page after 2 seconds
+                            setTimeout(function(){
+                                window.location.assign("../blog/")
+                            },2000);
+                        } else {
+                            swal.fire("Error!", results.message, "error");
+                        }
+                    }
+                });
+
+            } else {
+                e.dismiss;
+            }
+
+        }, function (dismiss) {
+            return false;
+        })
+    }
+
+</script>

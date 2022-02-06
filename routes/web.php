@@ -24,9 +24,14 @@ Route::get('/', function () {
 Route::get('post', function () {
     return view('pages.home');
 });
+Route::post('/galery/delete/{id}', ['App\Http\Controllers\image_controller', 'delete']);
+Route::post('/blog/delete/{id}', ['App\Http\Controllers\BlogController', 'delete']);
+Route::post('/image/like/{id}', ['App\Http\Controllers\image_controller', 'likeimage']);
+Route::get('/image/get/{id}', ['App\Http\Controllers\image_controller', 'dataselect']);
 Route::post('/addletter', 'App\Http\Controllers\letter@addletter');
 Route::post('delete/{id}', ['App\Http\Controllers\WorkerController', 'delete']);
 Route::post('/user/delete/{id}', ['App\Http\Controllers\PostController', 'delete']);
+Route::resource('galery', 'App\Http\Controllers\image_controller');
 Route::resource('worker', 'App\Http\Controllers\WorkerController');
 Route::resource('post', 'App\Http\Controllers\PostController');
 Route::resource('letter', 'App\Http\Controllers\letter');

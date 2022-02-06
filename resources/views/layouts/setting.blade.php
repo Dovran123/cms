@@ -8,7 +8,6 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset("css/app.css")}}">
 
@@ -42,6 +41,11 @@
                         @if(auth()->user()->user_type == 'Administrator')
                             <li class="nav-item">
                                 <a class="nav-link {{ (request()->is('post/nastavenie')) ? 'active' : '' }}" href="/post/nastavenie">Setting</a>
+                            </li>
+                        @endif
+                        @if(auth()->user()->user_type == 'Administrator')
+                            <li class="nav-item">
+                                <a class="nav-link {{ (request()->is('galery')) ? 'active' : '' }}" href="/galery/">Galery</a>
                             </li>
                         @endif
                     @endauth

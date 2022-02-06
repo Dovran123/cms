@@ -5232,16 +5232,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./resources/js/ajax.js":
-/*!******************************!*\
-  !*** ./resources/js/ajax.js ***!
-  \******************************/
-/***/ (() => {
-
-
-
-/***/ }),
-
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -5250,21 +5240,18 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ajax_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ajax.js */ "./resources/js/ajax.js");
-/* harmony import */ var _ajax_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ajax_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _hlavicka_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hlavicka.js */ "./resources/js/hlavicka.js");
-/* harmony import */ var _hlavicka_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_hlavicka_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _hlavicka_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hlavicka.js */ "./resources/js/hlavicka.js");
+/* harmony import */ var _hlavicka_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_hlavicka_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _obrazkyjs_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./obrazkyjs.js */ "./resources/js/obrazkyjs.js");
+/* harmony import */ var _obrazkyjs_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_obrazkyjs_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _blog_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blog.js */ "./resources/js/blog.js");
 /* harmony import */ var _blog_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_blog_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _obrazkyjs_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./obrazkyjs.js */ "./resources/js/obrazkyjs.js");
-/* harmony import */ var _obrazkyjs_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_obrazkyjs_js__WEBPACK_IMPORTED_MODULE_3__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
-
 
 
 

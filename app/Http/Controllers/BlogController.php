@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\blog;
+use App\Models\image;
+use App\Models\User;
 use App\Models\worker;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -16,7 +18,7 @@ class BlogController extends Controller
  */
 public function index()
 {
-    return view("pages.blog")->with('blog',blog::orderby('updated_at','DESC')->get());
+    return view("pages.blog")->with('blog',blog::orderby('updated_at','DESC')->get())->with('imag',image::orderby('updated_at','DESC')->get());
 }
 
 /**
@@ -51,7 +53,7 @@ public function store(Request $request)
         'uzivatel_fk' => $request['uzivatel_fk'],
     ]);
 
-    return view("pages.blog")->with('blog',blog::orderby('updated_at','DESC')->get());
+    return view("pages.blog")->with('blog',blog::orderby('updated_at','DESC')->get())->with('imag',image::orderby('updated_at','DESC')->get());
 }
 
 /**
@@ -86,18 +88,23 @@ public function edit(blog $blog)
  */
 public function update(Request $request, int $id)
 {
-    $request->validate([
-        'image' => ['required','mimes:jpg,jpeg,bmp,png']
-    ]);
-    $image = request()->file('image')->store('uploads', ['disk' => 'public']);
-
+    if ($request['image'] != "") {
+        $request->validate([
+            'image' => ['required', 'mimes:jpg,jpeg,bmp,png']
+        ]);
+        $image = request()->file('image')->store('uploads', ['disk' => 'public']);
+        $worker = blog::where('id',$id)->update([
+            'image' => $image
+        ]);
+    }
     $worker = blog::where('id',$id)->update([
-        'image' => $image,
+
         'text' => $request['text'],
         'nadpis' => $request['nadpis'],
         'category' => $request['category'],
-        'tag' => $request['tag'],
-        'uzivatel_fk' => $request['uzivatel_fk'],
+        'tag' => $request['tag']
+
+
     ]);
     return view("pages.show")->with('blog',blog::where('id',$id)->first());
 }
@@ -116,4 +123,23 @@ public function destroy(int $blog)
     return view("pages.home");
 
 }
+    public function delete($id)
+    {
+        $delete = blog::destroy($id);
+
+        // check data deleted or not
+        if ($delete == 1) {
+            $success = true;
+            $message = "User deleted successfully";
+        } else {
+            $success = true;
+            $message = "User not found";
+        }
+
+        //  return response
+        return response()->json([
+            'success' => $success,
+            'message' => $message,
+        ]);
+    }
 }

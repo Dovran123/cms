@@ -5,10 +5,10 @@
  */
 
 require('./bootstrap');
-import './ajax.js';
-
 import './hlavicka.js';
 
 
-import './blog.js';
 import './obrazkyjs.js';
+
+import './blog.js';
+

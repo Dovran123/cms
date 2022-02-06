@@ -78,7 +78,7 @@ class letter extends Controller
 
         }else{
             $success = false;
-            $message = "dont fill row";
+            $message = "you dont fill something input";
         }
         return response()->json([
             'success' => $success,

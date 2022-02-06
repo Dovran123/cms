@@ -6,7 +6,7 @@
 @section('content')
 
     <div class="login">
-    <form method="POST" action="/worker/{{$worker->id}}" >
+    <form method="POST" action="/worker/{{$worker->id}}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
     <div class="container rounded bg-white mt-5 mb-5">

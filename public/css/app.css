@@ -12027,6 +12027,7 @@ input[type=text], select, textarea {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 2;
 }
 
 .hlavicka ul li {
@@ -12723,4 +12724,20 @@ div.login {
   margin-left: 63%;
   position: absolute;
   margin-top: 25%;
+}
+
+.like i:hover {
+  color: #0c63e4;
+}
+
+.like {
+  position: relative;
+  top: 2px;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 1150px) {
+  .like {
+    padding-left: 88%;
+  }
 }
