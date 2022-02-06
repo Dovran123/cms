@@ -12,11 +12,13 @@
                 <div class="d-flex flex-column align-items-center text-center p-3 py-5">
                     <img class="rounded-circle mt-5" alt="obr" style="width: 150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
                     <span class="font-weight-bold">{{ auth()->user()->name }} {{ auth()->user()->last_name }}</span>
-                    <span class="text-black-50">{{auth()->user()->email}}</span><span> </span></div>
+                    <span class="text-black-50">{{auth()->user()->email}}</span></div>
             </div>
             <div class="col-md-7 border-right">
                 <div class="p-3 py-5">
+                    @error('uzivatel_fk') <div style="color: red "><p>You was creating profile</p> </div>@enderror
                     <div class="d-flex justify-content-between align-items-center mb-3">
+
                         <h4 class="text-right">Profile Settings</h4>
                     </div>
                     <div class="row mt-2">
