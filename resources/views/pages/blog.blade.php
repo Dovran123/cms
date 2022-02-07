@@ -23,17 +23,7 @@
             </form>
         </div>
     </div>
-   <div id="addg"  class="popup" style="height: 200px; margin-left: 30%;">
-       <div  class="vlastne">
-           <form action="{{route("galery.store")}}" method="post" enctype="multipart/form-data">
-               @csrf
-               <div style="background-color: red">  <p>@error('image') you dont get bad format @enderror </p></div>
-               <label for="nasd" >Name</label><input type="text" name="name" id="nasd" value="" required>
-               <label for="images" >image</label><input type="file" class="@error('image') is-invalid @enderror" name="image" id="images"  required>
-               <input style="margin-top: 20px"  type="submit">
-           </form>
-       </div>
-   </div>
+
         @endif
 @endauth
     @foreach($blog as $item)
@@ -65,63 +55,4 @@
 </div>
 @endforeach
 
-<div class="blok-obrazky">
-    <div class="container">
-
-     <div style="justify-content: space-between"> <h1>Galery</h1>   @auth  @if(auth()->user()->user_type == "Administrator") <a  style="color: green" href="#addg"><i class="fad fa-plus-square"></i></a>@endif @endauth
-
-     </div>
-
-        <div class="left-arrow">
-            <a class="lava" style="font-size: 30px" href="#"><i class="fas fa-chevron-left"></i></a>
-        </div>
-        <div class="right-arrow">
-            <a  class="prava" style="font-size: 30px" href="#"><i  class="fas fa-chevron-right"></i></a>
-        </div>
-
-        <div class="slaidery">
-        @foreach($imag as $item)
-
-                <div class="ini">
-                    <div class="like" style="display: flex" ><p style="margin-right: 10px" id="likesa{{$item->id}}">{{$item->like}}</p> <a  style="color: #0a53be" onclick="addlikess({{$item->id}},{{$item->like}})"><i class="fad fa-thumbs-up"></i></a></div>
-                    <img src="{{asset("storage/$item->image")}}"  alt="{{$item->name}}">
-                </div>
-            @endforeach
-
-
-
-            </div>
-    </div>
-</div>
-
 @endsection
-<script type="text/javascript">
-
-
-    function addlikess(id,likes) {
-        var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-        var _url = "{{url('/image/like')}}/"+id;
-        $.ajax({
-            type: 'POST',
-            url: _url,
-            data: {_token: CSRF_TOKEN,likes:likes},
-            dataType: 'JSON',
-            success: function (results) {
-                fetchdas(id);
-            }
-        })
-    }
-function fetchdas(id){
-    var _url = "{{url('/image/get')}}/"+id;
-    $.ajax({
-        type: 'GET',
-        url: _url,
-        dataType: 'JSON',
-        success: function (data) {
-            var lik = "#likesa" + id;
-            $(lik).html(data.like);
-        }
-    })
-}
-
-</script>

@@ -12006,7 +12006,7 @@ input[type=text], select, textarea {
   box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
   flex-direction: column;
-  padding: 5px 5px;
+  padding: 10px 15px;
 }
 
 .dropdown-content a {
@@ -12711,7 +12711,7 @@ div.login {
   display: flex;
   position: relative;
   overflow: hidden;
-  height: 800px;
+  height: 1400px;
 }
 
 .left-arrow {
@@ -12728,17 +12728,35 @@ div.login {
 }
 
 .like i:hover {
+  transform: translateY(-2px);
   color: #0c63e4;
 }
 
 .like {
+  cursor: pointer;
   position: relative;
   top: 2px;
   font-size: 25px;
 }
 
+.like i:active {
+  transform: translateY(1px);
+}
+
 @media screen and (max-width: 1150px) {
   .like {
     padding-left: 88%;
+  }
+}
+.vylep {
+  margin: 10px;
+  width: 500px;
+  margin-left: 23%;
+}
+
+@media screen and (max-width: 1150px) {
+  .vylep {
+    width: auto;
+    margin-left: 0;
   }
 }

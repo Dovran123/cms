@@ -4,22 +4,25 @@
     <div class="ikony">
         <ul class="topnav" id="myTopnav">
 
-            <li class="idk" id="post">
+            <li class="idk {{ (request()->is('post')) ? 'active' : '' }} {{ (request()->is('post/home')) ? 'active' : '' }}" id="post">
                 <a class="znacka"  style=""  href="/post">Home</a>
             </li>
-            <li id="about"  class="idk">
+            <li   class="idk  {{ (request()->is('post/about')) ? 'active' : '' }}">
                 <a class="znacka" href="/post/about" >About</a>
                <img alt="znacka" src="{{asset("images/icons8-triangle-arrow-24.png")}}" style="height: 13px; width: 13px" >
 
-                <div id="boxik" class="dropdown-content">
-                    <a class="idk" id="ourstaff"  href="/post/ourstaff">- Our Staff</a>
-                    <a class="idk" id="whatweoffer" href="/post/whatweoffer">- What We Offer</a>
+                <div  class="dropdown-content">
+                    <a class="idk {{ (request()->is('post/ourstaff')) ? 'active' : '' }}" id="ourstaff"  href="/post/ourstaff">- Our Staff</a>
+                    <a class="idk {{ (request()->is('post/whatweoffer')) ? 'active' : '' }}" id="whatweoffer" href="/post/whatweoffer">- What We Offer</a>
                 </div>
             </li>
-            <li class="idk" id="blog">
+            <li class="idk {{ (request()->is('blog')) ? 'active' : '' }}" id="blog">
                 <a  class="znacka"   href="/blog">Blog</a>
             </li>
-            <li class="idk" id="letter">
+            <li class="idk {{ (request()->is('galery')) ? 'active' : '' }}" id="ini">
+                <a class="znacka" href="/galery/">Galery</a>
+            </li>
+            <li class="idk {{ (request()->is('letter')) ? 'active' : '' }}" id="letter">
                 <a class="znacka"  style="" href="/letter">Contact</a>
             </li>
 

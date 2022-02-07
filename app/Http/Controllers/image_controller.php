@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\blog;
+use App\Models\Comment;
 use App\Models\image;
 use App\Models\messenge;
 use App\Models\worker;
@@ -13,7 +14,7 @@ class image_controller extends Controller
 {
     public function index()
     {
-        return view('pages.galery')->with('worker',image::orderby('updated_at','DESC')->get());
+        return view('pages.galery')->with('worker',image::orderby('updated_at','DESC')->get())->with('comm',Comment::orderby('updated_at','DESC')->get());
     }
     public function store(Request $request){
         $request->validate([
@@ -26,7 +27,7 @@ class image_controller extends Controller
             'image' => $image,
             'like' => $number
         ]);
-        return view("pages.blog")->with('blog',blog::orderby('updated_at','DESC')->get())->with('imag',image::orderby('updated_at','DESC')->get());
+        return view("pages.galery")->with('worker',image::orderby('updated_at','DESC')->get())->with('comm',Comment::orderby('updated_at','DESC')->get());;
     }
     public function delete($id)
     {

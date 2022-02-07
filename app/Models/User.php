@@ -60,6 +60,10 @@ class User extends Authenticatable
 
         return $this->hasMany(Worker::class,'id','uzivatel_fk');
     }
+    public function comment(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Comment::class,'id','uzivatel_fk');
+    }
     public function blog(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
 

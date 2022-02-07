@@ -31,11 +31,13 @@ Route::get('/image/get/{id}', ['App\Http\Controllers\image_controller', 'datasel
 Route::post('/addletter', 'App\Http\Controllers\letter@addletter');
 Route::post('delete/{id}', ['App\Http\Controllers\WorkerController', 'delete']);
 Route::post('/user/delete/{id}', ['App\Http\Controllers\PostController', 'delete']);
+Route::post('/comme/delete/{id}', ['App\Http\Controllers\CommentController', 'delete']);
 Route::resource('galery', 'App\Http\Controllers\image_controller');
 Route::resource('worker', 'App\Http\Controllers\WorkerController');
 Route::resource('post', 'App\Http\Controllers\PostController');
 Route::resource('letter', 'App\Http\Controllers\letter');
 Route::resource('blog', 'App\Http\Controllers\BlogController');
+Route::resource('comment', 'App\Http\Controllers\CommentController');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

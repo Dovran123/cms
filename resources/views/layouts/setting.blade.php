@@ -43,11 +43,7 @@
                                 <a class="nav-link {{ (request()->is('post/nastavenie')) ? 'active' : '' }}" href="/post/nastavenie">Setting</a>
                             </li>
                         @endif
-                        @if(auth()->user()->user_type == 'Administrator')
-                            <li class="nav-item">
-                                <a class="nav-link {{ (request()->is('galery')) ? 'active' : '' }}" href="/galery/">Galery</a>
-                            </li>
-                        @endif
+
                     @endauth
             </ul>
             <ul class="navbar-nav  mb-2 mb-lg-0">

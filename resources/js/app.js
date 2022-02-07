@@ -5,10 +5,11 @@
  */
 
 require('./bootstrap');
-import './hlavicka.js';
-
 
 import './obrazkyjs.js';
+
+import './hlavicka.js';
+
 
 import './blog.js';
 

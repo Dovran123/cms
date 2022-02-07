@@ -5240,10 +5240,10 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _hlavicka_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hlavicka.js */ "./resources/js/hlavicka.js");
-/* harmony import */ var _hlavicka_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_hlavicka_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _obrazkyjs_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./obrazkyjs.js */ "./resources/js/obrazkyjs.js");
-/* harmony import */ var _obrazkyjs_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_obrazkyjs_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _obrazkyjs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./obrazkyjs.js */ "./resources/js/obrazkyjs.js");
+/* harmony import */ var _obrazkyjs_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_obrazkyjs_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _hlavicka_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hlavicka.js */ "./resources/js/hlavicka.js");
+/* harmony import */ var _hlavicka_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_hlavicka_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _blog_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blog.js */ "./resources/js/blog.js");
 /* harmony import */ var _blog_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_blog_js__WEBPACK_IMPORTED_MODULE_2__);
 /**
